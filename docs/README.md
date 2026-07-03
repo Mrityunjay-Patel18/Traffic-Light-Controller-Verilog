@@ -15,7 +15,6 @@ Reset ----------->  |                         |
 
 
 
-
 FSM State machine:-
 
 
