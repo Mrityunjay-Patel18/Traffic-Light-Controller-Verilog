@@ -1,5 +1,4 @@
 Block Diagram:-
-
                     +-------------------------+
                     |     Traffic Light FSM   |
                     |                         |
