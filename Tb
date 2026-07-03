@@ -1,0 +1,38 @@
+Tb_Traffic_Light.v
+
+`timescale 1ns / 1ps
+
+module tb_traffic_light;
+
+reg clk;
+reg rst;
+
+wire red;
+wire yellow;
+wire green;
+
+traffic_light uut (
+    .clk(clk),
+    .rst(rst),
+    .red(red),
+    .yellow(yellow),
+    .green(green)
+);
+
+// Clock Generation (10 ns period)
+always #5 clk = ~clk;
+
+initial
+begin
+    clk = 0;
+    rst = 1;
+
+    #20;
+    rst = 0;
+
+    #200;
+
+    $finish;
+end
+
+endmodule
